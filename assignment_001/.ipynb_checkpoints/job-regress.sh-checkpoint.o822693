@@ -1,0 +1,19 @@
+
+########################################################################
+#      Date:           Sun 04 Apr 2021 05:16:11 PM PDT
+#    Job ID:           822693.v-qsvr-1.aidevcloud
+#      User:           u67633
+# Resources:           neednodes=1:iris_xe_max:ppn=2,nodes=1:iris_xe_max:ppn=2,walltime=06:00:00
+########################################################################
+
+
+start: 171615.048
+
+Using GPU for DPCPP
+Device : Intel(R) Iris(R) Xe MAX Graphics [0x4905]
+
+########################################################################
+# End of output for job 822693.v-qsvr-1.aidevcloud
+# Date: Sun 04 Apr 2021 05:19:09 PM PDT
+########################################################################
+

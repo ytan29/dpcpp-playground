@@ -1,0 +1,30 @@
+
+########################################################################
+#      Date:           Sun Apr  4 09:58:35 PDT 2021
+#    Job ID:           822401.v-qsvr-1.aidevcloud
+#      User:           u67633
+# Resources:           neednodes=1:xeon:ppn=2,nodes=1:xeon:ppn=2,walltime=06:00:00
+########################################################################
+
+
+start: 095841.022
+
+Using CPU for DPCPP
+Device : Intel(R) Xeon(R) Gold 6128 CPU @ 3.40GHz
+Random Height: 64.71 
+Cal. Weight: 130.95, Dist: 0.00
+Cal. Weight: 197.27, Dist: 0.00
+Cal. Weight: 161.75, Dist: 0.00
+Cal. Weight: 190.28, Dist: 0.00
+Cal. Weight: 135.65, Dist: 0.00
+With height 64.71, we predict the person weight to be 163.18 lbs
+Start: 1617555551 End: 1617555739
+
+stop: 100220.924
+
+
+########################################################################
+# End of output for job 822401.v-qsvr-1.aidevcloud
+# Date: Sun Apr  4 10:02:20 PDT 2021
+########################################################################
+

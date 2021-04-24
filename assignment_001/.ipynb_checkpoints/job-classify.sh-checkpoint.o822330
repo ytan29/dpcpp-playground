@@ -1,0 +1,24 @@
+
+########################################################################
+#      Date:           Sun 04 Apr 2021 06:38:45 AM PDT
+#    Job ID:           822330.v-qsvr-1.aidevcloud
+#      User:           u67633
+# Resources:           neednodes=1:core:ppn=2,nodes=1:core:ppn=2,walltime=06:00:00
+########################################################################
+
+
+start: 210404.063848.852
+
+Using CPU for DPCPP
+Device : Intel(R) Core(TM) i9-10920X CPU @ 3.50GHz
+N size : 1000000
+Random Age: 83  
+With Age 83, we predict the person likes pineapple on pizza
+
+stop: 210404.063859.454
+
+########################################################################
+# End of output for job 822330.v-qsvr-1.aidevcloud
+# Date: Sun 04 Apr 2021 06:38:59 AM PDT
+########################################################################
+

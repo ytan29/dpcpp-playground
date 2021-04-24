@@ -1,0 +1,23 @@
+
+########################################################################
+#      Date:           Sun 28 Mar 2021 07:00:45 PM PDT
+#    Job ID:           819034.v-qsvr-1.aidevcloud
+#      User:           u67633
+# Resources:           neednodes=1:gpu:ppn=2,nodes=1:gpu:ppn=2,walltime=06:00:00
+########################################################################
+
+
+start: 210328.190048.313
+
+Device : Intel(R) Graphics Gen9 [0x3e96]
+Random Height: 69.96 
+With height 69.96, we predict the person weight to be 151.37 lbs
+
+stop: 210328.190049.870
+
+
+########################################################################
+# End of output for job 819034.v-qsvr-1.aidevcloud
+# Date: Sun 28 Mar 2021 07:00:49 PM PDT
+########################################################################
+
