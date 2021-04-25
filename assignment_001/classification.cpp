@@ -13,7 +13,7 @@
 
 using namespace sycl;
 
-#define DEBUG 1
+#define DEBUG 0
 #define BLOCK_SIZE 256
 #define DEVICE_HOST 0
 #define DEVICE_GPU 1
@@ -180,8 +180,6 @@ int main(int argc, char* argv[]) {
     uint32_t input_age = rand() % 70 + 20;
     printf("Random Age: %u  \n", input_age);
     
-    start = std::time(nullptr);
-    
     /* DPCPP - Parallel For */
     q.parallel_for(range<1>(N), [=](id<1> i) {
         calc_distance[i] = abs((int)sample_age[i] - (int)input_age);
@@ -194,11 +192,13 @@ int main(int argc, char* argv[]) {
         printf("Age: %u, Choice: %d, Dist: %d\n", sample_age[sample_index[i]], sample_choice[sample_index[i]], calc_distance[i]);
     }
 #endif
+    start = std::time(nullptr);
     
     /* Using bitonicsort on the distance */
     ParallelBitonicSort(calc_distance, sample_index, power, q);
     
     end = std::time(nullptr);
+    printf("Start: %ld End: %ld Spent: %ld\n", start, end, (end - start));
     
 #if DEBUG
     printf("After Sort:\n");
@@ -236,7 +236,7 @@ int main(int argc, char* argv[]) {
     /* Result */
     printf("With Age %u, we predict the person %slikes pineapple on pizza\n", input_age, (favor_cnt > unfavor_cnt)? "" : "dis");
     
-    printf("Start: %ld End: %ld\n", start, end);
+    printf("Start: %ld End: %ld Spent: %ld\n", start, end, (end - start));
     
     free(sample_age, q);
     free(sample_choice, q);

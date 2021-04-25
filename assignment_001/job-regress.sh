@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./knn-regress -d cpu -p 28
+./knn-regress -d gpu -p 28

@@ -188,9 +188,7 @@ int main(int argc, char** argv) {
     /* Random input */
     float input_height = unif_height(re);
     printf("Random Height: %f\n", input_height);
-    
-    start = std::time(nullptr);
-    
+
     /* DPCPP - Parallel For */
     q.parallel_for(range<1>(N), [=](id<1> i) {
         calc_distance[i] = abs(sample_height[i] - input_height);
@@ -203,10 +201,13 @@ int main(int argc, char** argv) {
     }
 #endif
 
+    start = std::time(nullptr);
+
     /* Using bitonicsort on the distance */
     ParallelBitonicSort(calc_distance, sample_index, power, q);
     
     end = std::time(nullptr);
+    printf("Start: %ld End: %ld Spent: %ld\n", start, end, (end - start));
 
 #if DEBUG
     printf("Sorted calc_distance...\n");
@@ -245,8 +246,6 @@ int main(int argc, char** argv) {
     
     /* Result */
     printf("With height %f, we predict the person weight to be %f lbs\n", input_height, weight);
-
-    printf("Start: %ld End: %ld\n", start, end);
 
     free(sample_height, q);
     free(sample_weight, q);
